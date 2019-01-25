@@ -1,0 +1,14 @@
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+def caesar_shift(string, amount):
+  shifted = ''
+  for c in string:
+    if c!=' ':
+      shifted += alphabet[(alphabet.index(c)+amount)%26]
+    else:
+      shifted += ' '
+  return shifted
+
+while True:
+  s = input("What do you want to shift? ")
+  a = int(input("How much do you want it shifted? "))
+  print(caesar_shift(s, a))
